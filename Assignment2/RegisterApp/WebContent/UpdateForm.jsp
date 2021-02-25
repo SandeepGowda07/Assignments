@@ -19,7 +19,7 @@ User u=Userdao.getRecordById(Integer.parseInt(id));
 <tr><td>UserId:</td><td><input type="number" name="userid" value="<%=u.getUserId() %>"/></td></tr>
 <tr><td>UserName:</td><td><input type="text" name="uname" value="<%=u.getUserName() %>"/></td></tr>
 <tr><td>EmailId:</td><td><input type="Email" name="email" value="<%=u.getEmailId() %>"/></td></tr>
-<tr><td>DOB:</td><td><input type="number" name="dob" value="<%=u.getDob() %>"/></td></tr>
+<tr><td>DOB:</td><td><input type="date" name="dob" value="<%=u.getDob() %>"/></td></tr>
 <tr><td>Age:</td><td><input type="number" name="age" value="<%=u.getAge() %>"/></td></tr>
 <tr><td>Password:</td><td><input type="number" name="pass" value="<%=u.getPassword() %>"/></td></tr>
 <tr><td><input type="submit"value="submit"/></td></tr>
