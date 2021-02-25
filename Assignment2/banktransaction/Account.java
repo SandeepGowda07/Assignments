@@ -1,32 +1,27 @@
-package package1;
+package banktransaction;
 
 public class Account {
-	private int balance=1000;
-	
-	public int getbalance() {
-		return balance;
-	}
+	int balance;
+	int accountNo;
 	 public void withdraw(int bal) throws InterruptedException {
 		if(balance>=bal) {
-			System.out.println(Thread.currentThread().getName()+ " try to withdraw");
 			balance = balance - bal;
-			System.out.println(Thread.currentThread().getName() + " is completed withdraw");
-			System.out.println(Thread.currentThread().getName() + " withdraw Rs " + bal);
+			System.out.println("accountNo:" +accountNo + " withdraw Rs " + bal);
 			Thread.sleep(1000);
 		}else {
-			System.out.println(Thread.currentThread().getName() + " insufficient balance");
+			System.out.println("accountNo:"+accountNo + " insufficient balance");
 		}
 	
 	}
 	 public void Deposit(int bal) throws InterruptedException {
 		if(bal>0) {
 			balance = balance + bal;
-			System.out.println(Thread.currentThread().getName() + " is completed deposit");
+			System.out.println("accountNo:"+accountNo + " balance Rs " + balance);
 			Thread.sleep(1000);
 		}else {
-			System.out.println(Thread.currentThread().getName() + "doesn't have amount to deposit");
+			System.out.println("accountNo:"+accountNo + "doesn't have amount to deposit");
 		}
-		System.out.println(Thread.currentThread().getName() + " balance Rs " + balance);
+		
 		Thread.sleep(1000);
 	}
 	 }
